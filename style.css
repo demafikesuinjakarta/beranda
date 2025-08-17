@@ -414,6 +414,12 @@ body {
     font-size: 0.98rem;
 }
 
+.footer a {
+    font-style: normal;
+    color: #fff;
+    font-size: 0.98rem;
+}
+
 /* Responsive */
 
 @font-face {
@@ -601,3 +607,4 @@ body {
     }
 
 }
+
