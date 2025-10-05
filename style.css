@@ -310,6 +310,114 @@ body {
     background: #32326a;
 }
 
+.like-button {
+    padding: 36px 18px 18px 18px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: grey;
+    border: none;
+    background: none;
+    transition: color 0.3s ease;
+}
+
+.liked {
+  color: red;
+}
+
+.comment-container {
+  padding: 36px 18px 18px 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+form input[type="text"]{
+  padding: 36px 18px 18px 18px;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 36px 18px 18px 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Tambahkan di bagian bawah file atau sebelum media query */
+.like-comment-row {
+    padding: 36px 18px 18px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.like-comment-row .like-button {
+    font-size: 1.5rem;
+    color: grey;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0;
+}
+
+.like-comment-row .like-button.liked {
+    color: red;
+}
+
+.like-comment-row form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.like-comment-row input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 220px;
+    margin-bottom: 0;
+}
+
+.like-comment-row button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+}
+
+.like-comment-row button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 /* Footer */
 .footer {
     background: #23235a;
@@ -607,4 +715,5 @@ body {
     }
 
 }
+
 
