@@ -172,6 +172,21 @@
                     </div>
                 </article>
             </div>
+            <div class="like-comment-row">
+                <title>Tombol Like</title>
+                <link rel="stylesheet" href="style.css" />
+                <button id="likeBtn" class="like-button" aria-label="Like button">&#10084;</button>
+                    <script>
+                        const likeBtn = document.getElementById('likeBtn');
+                        likeBtn.addEventListener('click', () => {
+                        likeBtn.classList.toggle('liked');
+                        });
+                    </script>
+                <form id="commentForm">
+                <input type="text" id="komentar" name="komentar" placeholder="Masukkan komentar" required />
+                <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -261,6 +276,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </script>
 </body>
 </html>
+
 
 
 
