@@ -332,6 +332,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 450px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 form input[type="text"]{
@@ -344,6 +345,7 @@ form input[type="text"]{
   resize: vertical;
   font-size: 1rem;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 form button {
@@ -357,10 +359,11 @@ form button {
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #23235a;
 }
 
 /* Tambahkan di bagian bawah file atau sebelum media query */
@@ -403,7 +406,7 @@ form button:hover {
 }
 
 .like-comment-row button[type="submit"] {
-    background-color: #007bff;
+    background-color: #23235a;
     color: white;
     border: none;
     font-size: 15px;
@@ -415,7 +418,7 @@ form button:hover {
 }
 
 .like-comment-row button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #202040;
 }
 
 /* Footer */
@@ -715,5 +718,6 @@ form button:hover {
     }
 
 }
+
 
 
