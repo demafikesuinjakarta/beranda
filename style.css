@@ -350,7 +350,7 @@ form input[type="text"]{
 
 form button {
   padding: 36px 18px 18px 18px;
-  background-color: #007bff;
+  background-color: #23235a;
   color: white;
   border: none;
   font-size: 1.1rem;
@@ -718,6 +718,7 @@ form button:hover {
     }
 
 }
+
 
 
 
