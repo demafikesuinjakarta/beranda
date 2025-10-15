@@ -73,23 +73,66 @@
         <section class="news-section">
             <h2>Program Kerja Terlaksana</h2>
             <div class="news-articles-with-comments">
-                    <article class="news-item">
-                        <img src="Dokumentasi_AOTM_Agustus.png" alt="PBak">
-                        <div class="news-info">
-                            <h3>Pengumuman Pemenang AOTM bulan Agustus! </h3>
-                            <p class="news-summary">
-                            Lukisan ini menggambarkan perenungan batin dan rasa kagum yang menimbulkan tanya: “Bagaimana surga nanti?” Keindahan alam melambangkan ketenangan dan kesempurnaan ciptaan Tuhan, sementara sungai kecil mencerminkan perjalanan menuju kedamaian abadi, dan langit luas menjadi simbol harapan akan surga yang penuh cahaya dan kasih Ilahi.<span class="ellipsis">...</span>
-                            </p>
-                            <p class="news-detail" style="display: none;">
-                            Terima kasih untuk semua yang sudah berpartisipasi dan memberikan karya terbaiknya di Art of The Month (AOTM)🎨🔥<br> Dengan bangga kami umumkan pemenang AOTM bulan Agustus: <br> 🏆Ani Fatmawati dengan karya seni lukis 🏆 <br> Selamat untuk pemenang! 🎉👏 <br> Semoga terus berkarya dan menginspirasi banyak orang lewat seni 💫 <br> Stay tuned untuk AOTM bulan berikutnya ya! 😉</p>
+                <article class="news-item">
+                    <img src="Dokumentasi_AOTM_Agustus.png" alt="PBak">
+                    <div class="news-info">
+                        <h3>Pengumuman Pemenang AOTM bulan Agustus! </h3>
+                        <p class="news-summary">
+                        Lukisan ini menggambarkan perenungan batin dan rasa kagum yang menimbulkan tanya: “Bagaimana surga nanti?” Keindahan alam melambangkan ketenangan dan kesempurnaan ciptaan Tuhan, sementara sungai kecil mencerminkan perjalanan menuju kedamaian abadi, dan langit luas menjadi simbol harapan akan surga yang penuh cahaya dan kasih Ilahi.<span class="ellipsis">...</span>
+                        </p>
+                        <p class="news-detail" style="display: none;">
+                        Terima kasih untuk semua yang sudah berpartisipasi dan memberikan karya terbaiknya di Art of The Month (AOTM)🎨🔥<br> Dengan bangga kami umumkan pemenang AOTM bulan Agustus: <br> 🏆Ani Fatmawati dengan karya seni lukis 🏆 <br> Selamat untuk pemenang! 🎉👏 <br> Semoga terus berkarya dan menginspirasi banyak orang lewat seni 💫 <br> Stay tuned untuk AOTM bulan berikutnya ya! 😉</p>
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
-                        </div>
-                    </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSepJC3Yp2b_blaU3YDdtB4L3fQra5wJCVvYHZfjHajgIS9PdA/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                        <input type="text" id="komentar" name="entry.1527887547" placeholder="Masukkan komentar" required />
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
+                    </div>
+                </article>
+                <div class="like-comment-section">
+                    <div class="like-section">
+                        <button id="like-button" class="love-btn">
+                            <svg id="love-icon" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                            <span id="like-text">Like</span>
+                        </button>
+                        <span id="like-count">0</span> likes
+                    </div>
+                    <div class="comment-section">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdHxfaYPFCQ2MFKRcC2LwnxVGymk5XDTIl1RB_aPSGM72mFGw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                            <input type="text" id="komentar" name="entry.1505365527" placeholder="Masukkan komentar" required />
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <script>
+                        const likeButton = document.getElementById('like-button');
+                            const likeCountElement = document.getElementById('like-count');
+                            const loveIcon = document.getElementById('love-icon');
+                            const likeText = document.getElementById('like-text');
+
+                            let likeCount = JSON.parse(localStorage.getItem('likeCount')) || 0;
+                            let hasLiked = JSON.parse(localStorage.getItem('hasLiked')) || false;
+
+                            likeCountElement.innerText = likeCount;
+
+                            // Set icon color if already liked
+                            if (hasLiked) {
+                                likeButton.disabled = true;
+                                likeText.textContent = "";
+                                loveIcon.setAttribute("fill", "#e53935"); // merah terang
+                            }
+
+                            likeButton.addEventListener('click', () => {
+                                if (!hasLiked) {
+                                    likeCount++;
+                                    likeCountElement.innerText = likeCount;
+                                    localStorage.setItem('likeCount', JSON.stringify(likeCount));
+                                    localStorage.setItem('hasLiked', JSON.stringify(true));
+                                    likeButton.disabled = true;
+                                    likeText.textContent = "Liked";
+                                    loveIcon.setAttribute("fill", "#e53935"); // merah terang
+                                }
+                            });        
+                    </script>
+                </div>    
+            </div>
         </section>
     </main>
 
@@ -178,5 +221,4 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 });
 </script>
 </body>
-
 </html>
