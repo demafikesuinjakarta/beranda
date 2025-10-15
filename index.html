@@ -85,10 +85,23 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfMPYATmDmyS9Ri0KvrVIZyUrMNzXfu0ux_GiMWOkWuGkFklg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                        <input type="text" id="komentar" name="entry.979990620" placeholder="Masukkan komentar" required />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button" class="love-btn">
+                                <svg id="love-icon" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                                <span id="like-text">Like</span>
+                            </button>
+                            <span id="like-count">0</span> likes
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfMPYATmDmyS9Ri0KvrVIZyUrMNzXfu0ux_GiMWOkWuGkFklg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.979990620" placeholder="Masukkan komentar" required />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
@@ -257,9 +270,39 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
         }
     });
 });
+
+    const likeButton = document.getElementById('like-button');
+    const likeCountElement = document.getElementById('like-count');
+    const loveIcon = document.getElementById('love-icon');
+    const likeText = document.getElementById('like-text');
+
+    let likeCount = JSON.parse(localStorage.getItem('likeCount')) || 0;
+    let hasLiked = JSON.parse(localStorage.getItem('hasLiked')) || false;
+
+    likeCountElement.innerText = likeCount;
+
+    // Set icon color if already liked
+    if (hasLiked) {
+        likeButton.disabled = true;
+        likeText.textContent = "";
+        loveIcon.setAttribute("fill", "#e53935"); // merah terang
+    }
+
+    likeButton.addEventListener('click', () => {
+    if (!hasLiked) {
+    likeCount++;
+    likeCountElement.innerText = likeCount;
+    localStorage.setItem('likeCount', JSON.stringify(likeCount));
+    localStorage.setItem('hasLiked', JSON.stringify(true));
+    likeButton.disabled = true;
+    likeText.textContent = "Liked";
+    loveIcon.setAttribute("fill", "#e53935"); // merah terang
+    }
+}); 
 </script>
 </body>
 </html>
+
 
 
 
