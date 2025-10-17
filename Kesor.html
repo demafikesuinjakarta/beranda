@@ -91,9 +91,8 @@
                             <svg id="love-icon" width="24" height="24" viewBox="0 0 24 24" fill="#888">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                             </svg>
-                            <span id="like-text">Like</span>
+                            <span id="like-text"></span>
                         </button>
-                        <span id="like-count">0</span> likes
                     </div>
                     <div class="comment-section">
                         <form action="https://docs.google.com/forms/d/e/1FAIpQLSdHxfaYPFCQ2MFKRcC2LwnxVGymk5XDTIl1RB_aPSGM72mFGw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
@@ -102,34 +101,25 @@
                         </form>
                     </div>
                     <script>
-                        const likeButton = document.getElementById('like-button');
-                            const likeCountElement = document.getElementById('like-count');
-                            const loveIcon = document.getElementById('love-icon');
-                            const likeText = document.getElementById('like-text');
+                        const loveIcon = document.getElementById('love-icon');
+                        const likeText = document.getElementById('like-text');
 
-                            let likeCount = JSON.parse(localStorage.getItem('likeCount')) || 0;
-                            let hasLiked = JSON.parse(localStorage.getItem('hasLiked')) || false;
+                        let hasLiked = JSON.parse(localStorage.getItem('hasLiked')) || false;
 
-                            likeCountElement.innerText = likeCount;
+                        // Set icon warna dan teks jika sudah like sebelumnya
+                        if (hasLiked) {
+                            loveIcon.setAttribute("fill", "#e53935"); // merah terang
+                            likeText.textContent = "";
+                        }
 
-                            // Set icon color if already liked
-                            if (hasLiked) {
-                                likeButton.disabled = true;
-                                likeText.textContent = "";
+                        loveIcon.addEventListener('click', () => {
+                            if (!hasLiked) {
+                                hasLiked = true;
+                                localStorage.setItem('hasLiked', JSON.stringify(true));
                                 loveIcon.setAttribute("fill", "#e53935"); // merah terang
+                                likeText.textContent = "Liked";
                             }
-
-                            likeButton.addEventListener('click', () => {
-                                if (!hasLiked) {
-                                    likeCount++;
-                                    likeCountElement.innerText = likeCount;
-                                    localStorage.setItem('likeCount', JSON.stringify(likeCount));
-                                    localStorage.setItem('hasLiked', JSON.stringify(true));
-                                    likeButton.disabled = true;
-                                    likeText.textContent = "Liked";
-                                    loveIcon.setAttribute("fill", "#e53935"); // merah terang
-                                }
-                            });        
+                        });       
                     </script>
                 </div>    
             </div>
@@ -222,3 +212,4 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </script>
 </body>
 </html>
+
