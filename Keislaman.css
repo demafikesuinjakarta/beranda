@@ -320,23 +320,44 @@ body {
     background: #32326a;
 }
 
-.like-comment-row form,
-.news-articles-with-comments form {
+.like-comment-section {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 12px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 0;
-    background: none;
-    box-shadow: none;
-    font-family: 'source sans pro', Arial, sans-serif;
+    gap: 16px;
+    margin-top: 12px;
 }
 
-.like-comment-row input[type="text"],
-.news-articles-with-comments input[type="text"] {
+.like-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.love-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px 12px;
+}
+
+.love-btn:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 500px; /* Lebar maksimum form */
+}
+
+.comment-section input {
     flex: 1;
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -345,20 +366,18 @@ body {
     font-family: 'source sans pro', Arial, sans-serif;
 }
 
-.like-comment-row button[type="submit"],
-.news-articles-with-comments button[type="submit"] {
-    background-color: #23235a;
-    color: white;
+.comment-section button {
+    background: #23235a;
+    color: #fff;
     border: none;
     font-family: 'source sans pro', Arial, sans-serif;
     font-size: 1rem;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s;
     white-space: nowrap;
 }
-
 
 /* Footer */
 .footer {
@@ -671,4 +690,5 @@ body {
     }
 
     
+
 }
