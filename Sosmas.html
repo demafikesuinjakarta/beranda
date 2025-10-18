@@ -86,11 +86,39 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScTy2HpR_Lh_v4PJNKKH0Y3gFML6Vu6XcBoxGWcTurif7s3wQ/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                        <input type="text" id="komentar" name="entry.1288190794" placeholder="Masukkan komentar" required />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-openinggenfm-sosmas" class="love-btn">
+                                <svg id="love-icon-artikel-openinggenfm-sosmas" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLScTy2HpR_Lh_v4PJNKKH0Y3gFML6Vu6XcBoxGWcTurif7s3wQ/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.1288190794" placeholder="Masukkan komentar" required />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div> 
                 </div>
+                <script>
+                    const loveIconOpeningGenfmSosmas = document.getElementById('love-icon-openinggenfm-sosmas');
+
+                    let hasLikedOpeningGenfmSosmas = JSON.parse(localStorage.getItem('hasLiked-openinggenfm-sosmas')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedOpeningGenfmSosmas) {
+                        loveIconOpeningGenfmSosmas.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconOpeningGenfmSosmas.addEventListener('click', () => {
+                    if (!hasLikedOpeningGenfmSosmas) {
+                            hasLikedOpeningGenfmSosmas = true;
+                            localStorage.setItem('hasLiked-openiggenfm-sosmas', JSON.stringify(true));
+                            loveIconOpeningGenfmSosmas.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
             </div>
         </section>
     </main>
@@ -182,3 +210,4 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
