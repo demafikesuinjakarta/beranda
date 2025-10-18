@@ -68,7 +68,7 @@
 <!-- Main Content -->
     <main>
         <section class="news-section">
-            <h2>Program Kerja Terlaksana</h2>
+            <<h2>Program Kerja Terlaksana</h2>
             <div class="news-articles-with-comments">
                 <article class="news-item">
                     <img src="Dokumentasi_Capacity Building.jpg" alt="PBak">
@@ -79,19 +79,47 @@
                             <span class="ellipsis">...</span>
                         </p>
                         <p class="news-detail" style="display: none;">
-                         Acara dibuka dengan sambutan dari Maisyatil Aulia (Ketua Pelaksana), Mahsa Raissa Raphy (Ketua DEMA FIKES), dan Muhammad Fanshoby, M.Sos (Direktur SINATIF). Kegiatan inti menghadirkan dua pemateri inspiratif. Sesi pertama, Fadhlan Rasyid, S.I.Kom, membawakan materi Digital Marketing for Organization yang membahas strategi membangun citra dan komunikasi digital organisasi mahasiswa. Sesi kedua, Nadia Khairunnisa, M.Psi., menyampaikan materi Leadership and Organizational Management dengan menekankan pentingnya kolaborasi, empati, dan komunikasi efektif dalam kepemimpinan. <br> Diskusi berjalan interaktif dan diwarnai ice breaking yang menciptakan suasana akrab. Peserta aktif bertanya dan berbagi pengalaman, menunjukkan antusiasme terhadap materi yang dibahas. Acara ditutup dengan penyerahan sertifikat kepada pemateri dan moderator, doa bersama, serta sesi dokumentasi pada pukul 14.55 WIB. Melalui kegiatan ini, DEMA FIKES UIN Jakarta berharap seluruh anggota mampu menerapkan semangat “Innovative Minds, Proactive Action, and Collaborative Teamwork” dalam menjalankan peran dan tanggung jawab organisasi. <br> <br> Penulis : Aqila Nur Kamila, Kesehatan Masyarakat, Kominfo dan Savina Adilia, Ilmu Keperawatan, Kesor.
+                        Acara dibuka dengan sambutan dari Maisyatil Aulia (Ketua Pelaksana), Mahsa Raissa Raphy (Ketua DEMA FIKES), dan Muhammad Fanshoby, M.Sos (Direktur SINATIF). Kegiatan inti menghadirkan dua pemateri inspiratif. Sesi pertama, Fadhlan Rasyid, S.I.Kom, membawakan materi Digital Marketing for Organization yang membahas strategi membangun citra dan komunikasi digital organisasi mahasiswa. Sesi kedua, Nadia Khairunnisa, M.Psi., menyampaikan materi Leadership and Organizational Management dengan menekankan pentingnya kolaborasi, empati, dan komunikasi efektif dalam kepemimpinan. <br> Diskusi berjalan interaktif dan diwarnai ice breaking yang menciptakan suasana akrab. Peserta aktif bertanya dan berbagi pengalaman, menunjukkan antusiasme terhadap materi yang dibahas. Acara ditutup dengan penyerahan sertifikat kepada pemateri dan moderator, doa bersama, serta sesi dokumentasi pada pukul 14.55 WIB. Melalui kegiatan ini, DEMA FIKES UIN Jakarta berharap seluruh anggota mampu menerapkan semangat “Innovative Minds, Proactive Action, and Collaborative Teamwork” dalam menjalankan peran dan tanggung jawab organisasi. <br> <br> Penulis : Aqila Nur Kamila, Kesehatan Masyarakat, Kominfo dan Savina Adilia, Ilmu Keperawatan, Kesor.
                         </p>
                         <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                     </div>
                 </article>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeWE5jv8IZ2GwYgKb6EPceVMIDHWD7A1P0u7pFumm73ER97uA/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                    <input type="text" id="komentar" name="entry.1782657502" placeholder="Masukkan komentar" required />
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="like-comment-section">
+                    <div class="like-section">
+                        <button id="like-button-capbul-psdm" class="love-btn">
+                            <svg id="love-icon-capbul-psdm" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="comment-section">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeWE5jv8IZ2GwYgKb6EPceVMIDHWD7A1P0u7pFumm73ER97uA/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                            <input type="text" id="komentar" name="entry.1782657502" placeholder="Masukkan komentar" required />
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+            <script>
+                const loveIconCapbulPsdm = document.getElementById('love-icon-capbul-psdm');
+
+                let hasLikedCapbulPsdm = JSON.parse(localStorage.getItem('hasLiked-capbul-psdm')) || false;
+
+                // Set icon warna dan teks jika sudah like sebelumnya
+                if (hasLikedCapbulPsdm) {
+                    loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                    loveIconCapbulPsdm.addEventListener('click', () => {
+                if (!hasLikedCapbulPsdm) {
+                        hasLikedCapbulPsdm = true;
+                        localStorage.setItem('hasLiked-capbul-psdm', JSON.stringify(true));
+                        loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang   
+                        }
+                    });       
+            </script>
             <div class="news-articles-with-comments">
                 <article class="news-item">
-                    <img src="Dokumentasi_Rapat Kerja.png">
+                    <img src="Dokumentasi_Rapat Kerja.pngPBak">
                     <div class="news-info">
                         <h3>Rapat Kerja DEMA FIKES Periode 2025-2026
                         <p class="news-summary">
@@ -99,15 +127,43 @@
                             <span class="ellipsis">...</span>
                         </p>
                         <p class="news-detail" style="display: none;">
-                        Raker diawali dengan pembukaan, sambutan, serta sidang pendahuluan dan pleno untuk mengesahkan dokumen kelembagaan seperti SOP, AD/ART, dan GBHO. Wakil Dekan III, Dr. Uswatun Khasanah M.N.S., turut memberikan sambutan dan apresiasi atas semangat sinergi antarorganisasi. <br> Selanjutnya, seluruh departemen menyampaikan program kerja yang telah disusun, yaitu: <br> Departemen Kemahasiswaan <br> Departemen Sosial Masyarakat <br> Departemen Pengembangan Sumber Daya Manusia (PSDM) <br> Departemen Keilmuan <br> Departemen Kesenian dan Olahraga <br> Departemen Komunikasi dan Informasi <br> Departemen Kajian Isu dan Aksi Strategis (KASTRAT) <br> Departemen Keislaman <br> Biro Keuangan dan Kewirausahaan <br> Badan Pengurus Harian (BPH) <br> Kegiatan berlangsung interaktif, penuh antusias, dan ditutup dengan doa serta sesi foto bersama. Raker ini menjadi awal langkah strategis dalam membangun DEMA FIKES yang progresif, kolaboratif, dan berdampak bagi civitas akademika. <br> <br> Penulis: Farika Zada Al Amadea, Farmasi, BKK
+                        Raker diawali dengan pembukaan, sambutan, serta sidang pendahuluan dan pleno untuk mengesahkan dokumen kelembagaan seperti SOP, AD/ART, dan GBHO. Wakil Dekan III, Dr. Uswatun Khasanah M.N.S., turut memberikan sambutan dan apresiasi atas semangat sinergi antarorganisasi.<br> Selanjutnya, seluruh departemen menyampaikan program kerja yang telah disusun, yaitu:<br>  Departemen Kemahasiswaan<br> Departemen Sosial Masyarakat<br>Departemen Pengembangan Sumber Daya Manusia (PSDM)<br>Departemen Keilmuan<br>Departemen Kesenian dan Olahraga<br>Departemen Komunikasi dan Informasi<br>Departemen Kajian Isu dan Aksi Strategis (KASTRAT)<br>Departemen Keislaman<br>Biro Keuangan dan Kewirausahaan<br>Badan Pengurus Harian (BPH) <br> Kegiatan berlangsung interaktif, penuh antusias, dan ditutup dengan doa serta sesi foto bersama. Raker ini menjadi awal langkah strategis dalam membangun DEMA FIKES yang progresif, kolaboratif, dan berdampak bagi civitas akademika. <br> <br> Penulis: Farika Zada Al Amadea, Farmasi, BKK
                         </p>
                         <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                     </div>
                 </article>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfKTcD2F0WrChQghBeyq-NPJsVxNXS4akRmxPKAsb2O605Ygg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                    <input type="text" id="komentar" name="entry.803534138" placeholder="Masukkan komentar" required />
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="like-comment-section">
+                    <div class="like-section">
+                        <button id="like-button-raker-psdm" class="love-btn">
+                            <svg id="love-icon-raker-psdm" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="comment-section">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeWE5jv8IZ2GwYgKb6EPceVMIDHWD7A1P0u7pFumm73ER97uA/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                            <input type="text" id="komentar" name="entry.1782657502" placeholder="Masukkan komentar" required />
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <script>
+                    const loveIconRakerPsdm = document.getElementById('love-icon-raker-psdm');
+
+                    let hasLikedRakerPsdm = JSON.parse(localStorage.getItem('hasLiked-raker-psdm')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedRakerPsdm) {
+                        loveIconRakerPsdm.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconRakerPsdm.addEventListener('click', () => {
+                    if (!hasLikedRakerPsdm) {
+                            hasLikedRakerPsdm = true;
+                            localStorage.setItem('hasLiked-raker-psdm', JSON.stringify(true));
+                            loveIconRakerPsdm.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>        
             </div>
         </section>
     </main>
@@ -198,6 +254,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </script>
 </body>
 </html>
+
 
 
 
