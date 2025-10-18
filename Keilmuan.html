@@ -86,10 +86,39 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScOUgfyDk7Sb2PTrO958L9h_U25yw7Q9S1lpeVJZDlKnj8Ynw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                            <input type="text" id="komentar" name="entry.1307543051" placeholder="Masukkan komentar" required />
-                            <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-september-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-september-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLScOUgfyDk7Sb2PTrO958L9h_U25yw7Q9S1lpeVJZDlKnj8Ynw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                    <input type="text" id="komentar" name="entry.1307543051" placeholder="Masukkan komentar" required />
+                                    <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtkelSeptemberKeilmuan = document.getElementById('love-icon-artikel-september-keilmuan');
+
+                    let hasLikedArtikelSeptemberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-september-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelSeptemberKeilmuan) {
+                        loveIconArtikelSeptemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtkelSeptemberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelSeptemberKeilmuan) {
+                            hasLikedArtikelSeptemberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-september-keilmuan', JSON.stringify(true));
+                            loveIconArtkelSeptemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
                 </div>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
@@ -106,11 +135,39 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSezWa7seFGs0Cfqx3ThBPwRFb7Wzr0PGtsR5tnLZa7bCES47g/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                        <input type="text" id="komentar" name="entry.1257750072" placeholder="Masukkan komentar" required />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-agustus-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-agustus-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSezWa7seFGs0Cfqx3ThBPwRFb7Wzr0PGtsR5tnLZa7bCES47g/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.1257750072" placeholder="Masukkan komentar" required />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div> 
                 </div>
+                <script>
+                    const loveIconArtikelAgustusKeilmuan = document.getElementById('love-icon-artikel-agustus-keilmuan');
+
+                    let hasLikedArtikelAgustusKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-agustus-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelAgustusKeilmuan) {
+                        loveIconArtikelAgustusKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelAgustusKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelAgustusKeilmuan) {
+                            hasLikedArtikelAgustusKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-agustus-keilmuan', JSON.stringify(true));
+                            loveIconArtikelAgustusKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_Juli_Darah Tinggi.webp" alt="PBak">
@@ -126,11 +183,39 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSf1lJt_5aWR9yzEkBnFB6hIsb9BMC1-mQi-RySZAIvpggtrhg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                            <input type="text" id="komentar" name="entry.92585324" placeholder="Masukkan komentar" required />
-                            <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-juli-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-juli-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSf1lJt_5aWR9yzEkBnFB6hIsb9BMC1-mQi-RySZAIvpggtrhg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                    <input type="text" id="komentar" name="entry.92585324" placeholder="Masukkan komentar" required />
+                                    <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+                <script>
+                    const loveIconArtikelJuliKeilmuan = document.getElementById('love-icon-artikel-juli-keilmuan');
+
+                    let hasLikedArtikelJuliKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-juli-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelJuliKeilmuan) {
+                        loveIconArtikelJuliKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelJuliKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArikelJuliKeilmuan) {
+                            hasLikedArtikelJuliKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-juli-keilmuan', JSON.stringify(true));
+                            loveIconArtikelJuliKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_Juni_Covid-19.jpg" alt="PBak">
@@ -146,11 +231,39 @@
                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
                         </div>
                     </article>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfvRfymWEBuKINNcIHuj4YlYa81s0eTvEMDHJOXpGjA6SHRwQ/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                        <input type="text" id="komentar" name="entry.1953395777" placeholder="Masukkan komentar" required />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-juni-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-juni-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfvRfymWEBuKINNcIHuj4YlYa81s0eTvEMDHJOXpGjA6SHRwQ/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.1953395777" placeholder="Masukkan komentar" required />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+                <script>
+                    const loveIconArtikelJuniKeilmuan = document.getElementById('love-icon-artikel-juni-keilmuan');
+
+                    let hasLikedArtikelJuniKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-juni-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelJuniKeilmuan) {
+                        loveIconArtikelJuniKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelJuniKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelJuniKeilmuan) {
+                            hasLikedArtikelJuniKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-juni-keilmuan', JSON.stringify(true));
+                            loveIconArtikelJuniKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
             </div>
         </section>
     </main>
@@ -242,6 +355,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
 
 
 
