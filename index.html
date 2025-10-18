@@ -101,23 +101,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    const loveIconKastratSekas = document.getElementById('love-icon-kastrat-sekas');
-
-                    let hasLikedKastratSekas = JSON.parse(localStorage.getItem('hasLiked-kastrat-sekas')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedKastratSekas) {
-                        loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconKastratSekas.addEventListener('click', () => {
-                    if (!hasLikedKastratSekas) {
-                            hasLikedKastratSekas = true;
-                            localStorage.setItem('hasLiked-kastrat-sekas', JSON.stringify(true));
-                            loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-                </script>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_Capacity Building.jpg" alt="PBak">
@@ -149,23 +132,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    const loveIconCapbulPsdm = document.getElementById('love-icon-capbul-psdm');
-
-                    let hasLikedCapbulPsdm = JSON.parse(localStorage.getItem('hasLiked-capbul-psdm')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedCapbulPsdm) {
-                        loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconCapbulPsdm.addEventListener('click', () => {
-                    if (!hasLikedCapbulPsdm) {
-                            hasLikedCapbulPsdm = true;
-                            localStorage.setItem('hasLiked-capbul-psdm', JSON.stringify(true));
-                            loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-                </script>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_PBAK.jpg" alt="PBak">
@@ -197,23 +163,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    const loveIconPbakKemahas = document.getElementById('love-icon-pbak-kemahas');
-
-                    let hasLikedPbakKemahas = JSON.parse(localStorage.getItem('hasLiked-pbak-kemahas')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedPbakKemahas) {
-                        loveIconPbakKemahas.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconPbakKemahas.addEventListener('click', () => {
-                    if (!hasLikedPbakKemahas) {
-                            hasLikedPbakKemahas = true;
-                            localStorage.setItem('hasLiked-pbak-kemahas', JSON.stringify(true));
-                            loveIconPbakKemahas.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-                </script>
                 <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_September_Cacingan.webp" alt="PBak">
@@ -293,23 +242,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    const loveIconSeminarKeislaman = document.getElementById('love-icon-artikel-seminar-keislaman');
-
-                    let hasLikedSeminarKeislaman = JSON.parse(localStorage.getItem('hasLiked-seminar-keislaman')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedSeminarKeislaman) {
-                        loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconSeminarKeislaman.addEventListener('click', () => {
-                    if (!hasLikedSeminarKeislaman) {
-                            hasLikedSeminarKeislaman = true;
-                            localStorage.setItem('hasLiked-seminar-keislaman', JSON.stringify(true));
-                            loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-                </script>
             </div>
         </section>
     </main>
@@ -397,38 +329,73 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
         }
     });
 });
+                    const loveIconKastratSekas = document.getElementById('love-icon-kastrat-sekas');
 
-    const likeButtonKastratSekas = document.getElementById('like-button-kastrat-sekas');
-                            const likeCountElementKastratSekas = document.getElementById('like-count-kastrat-sekas');
-                            const loveIconKastratSekas = document.getElementById('love-icon-kastrat-sekas');
-                            const likeTextKastratSekas = document.getElementById('like-text-kastrat-sekas');
+                    let hasLikedKastratSekas = JSON.parse(localStorage.getItem('hasLiked-kastrat-sekas')) || false;
 
-                            let likeCountKastratSekas = JSON.parse(localStorage.getItem('likeCount-kastrat-sekas')) || 0;
-                            let hasLikedKastratSekas = JSON.parse(localStorage.getItem('hasLiked-kastrat-sekas')) || false;
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedKastratSekas) {
+                        loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconKastratSekas.addEventListener('click', () => {
+                    if (!hasLikedKastratSekas) {
+                            hasLikedKastratSekas = true;
+                            localStorage.setItem('hasLiked-kastrat-sekas', JSON.stringify(true));
+                            loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+               
+                    const loveIconCapbulPsdm = document.getElementById('love-icon-capbul-psdm');
 
-                            likeCountElementKastratSekas.innerText = likeCountKastratSekas;
+                    let hasLikedCapbulPsdm = JSON.parse(localStorage.getItem('hasLiked-capbul-psdm')) || false;
 
-                            // Set icon color if already liked
-                            if (hasLikedKastratSekas) {
-                                likeButtonKastratSekas.disabled = true;
-                                likeTextKastratSekas.textContent = "";
-                                loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
-                            }
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedCapbulPsdm) {
+                        loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconCapbulPsdm.addEventListener('click', () => {
+                    if (!hasLikedCapbulPsdm) {
+                            hasLikedCapbulPsdm = true;
+                            localStorage.setItem('hasLiked-capbul-psdm', JSON.stringify(true));
+                            loveIconCapbulPsdm.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                
+                    const loveIconPbakKemahas = document.getElementById('love-icon-pbak-kemahas');
 
-                            likeButtonKastratSekas.addEventListener('click', () => {
-                                if (!hasLikedKastratSekas) {
-                                    likeCountKastratSekas++;
-                                    likeCountElementKastratSekas.innerText = likeCountKastratSekas;
-                                    localStorage.setItem('likeCount-kastrat-sekas', JSON.stringify(likeCountKastratSekas));
-                                    localStorage.setItem('hasLiked-kastrat-sekas', JSON.stringify(true));
-                                    likeButtonKastratSekas.disabled = true;
-                                    likeTextKastratSekas.textContent = "Liked";
-                                    loveIconKastratSekas.setAttribute("fill", "#e53935"); // merah terang
-                                }
-                            });
+                    let hasLikedPbakKemahas = JSON.parse(localStorage.getItem('hasLiked-pbak-kemahas')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedPbakKemahas) {
+                        loveIconPbakKemahas.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconPbakKemahas.addEventListener('click', () => {
+                    if (!hasLikedPbakKemahas) {
+                            hasLikedPbakKemahas = true;
+                            localStorage.setItem('hasLiked-pbak-kemahas', JSON.stringify(true));
+                            loveIconPbakKemahas.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                
+                    const loveIconSeminarKeislaman = document.getElementById('love-icon-artikel-seminar-keislaman');
+
+                    let hasLikedSeminarKeislaman = JSON.parse(localStorage.getItem('hasLiked-seminar-keislaman')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedSeminarKeislaman) {
+                        loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconSeminarKeislaman.addEventListener('click', () => {
+                    if (!hasLikedSeminarKeislaman) {
+                            hasLikedSeminarKeislaman = true;
+                            localStorage.setItem('hasLiked-seminar-keislaman', JSON.stringify(true));
+                            loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
 </script>
 </body>
 </html>
+
 
 
 
