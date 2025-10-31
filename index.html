@@ -70,7 +70,55 @@
         <section class="news-section">
             <h2>Berita dan Artikel</h2>
             <div class="news-list">
-                 <div class="news-articles-with-comments">
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
+                        <img src="Dokumentasi_Oktober_Osteophorosis.jpg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Membangun Tulang Kuat Sejak Dini: Pencegahan Osteoporosis pada Remaja melalui Gaya Hidup Sehat</h3>
+                            <p class="news-summary">
+                            Osteoporosis, yang sering dianggap penyakit lansia, ternyata dapat mulai mengintai sejak remaja tanpa disadari dan berujung pada patah tulang di kemudian hari. Masa remaja merupakan fase krusial untuk membentuk kepadatan tulang maksimal yang menjadi “tabungan” bagi masa tua. Sekitar 90% massa tulang terbentuk hingga usia 18 tahun, sehingga pola hidup sehat pada periode ini sangat menentukan kekuatan tulang di masa depan.
+                                <span class="ellipsis">...</span>
+                            </p>
+                            <p class="news-detail" style="display: none;">
+                            Beberapa faktor gaya hidup dapat memengaruhi kesehatan tulang remaja, antara lain kurangnya asupan kalsium dan vitamin D, minimnya aktivitas fisik, kebiasaan merokok atau konsumsi minuman bersoda, serta kurangnya edukasi tentang kesehatan tulang. Gaya hidup modern yang cenderung sedentari juga memperburuk kondisi ini. Untuk mencegah osteoporosis, remaja dianjurkan menjalani pola makan seimbang yang kaya kalsium—seperti susu, tahu, tempe, ikan sarden, dan sayuran hijau—serta memenuhi kebutuhan harian sekitar 1.300 mg kalsium. Selain itu, paparan sinar matahari pagi selama 10–15 menit per hari dapat membantu tubuh memproduksi vitamin D secara alami. <br> Olahraga teratur seperti lari, lompat tali, atau latihan beban juga penting untuk merangsang pertumbuhan tulang, dengan rekomendasi minimal 60 menit aktivitas fisik sedang hingga berat per hari. Remaja juga perlu menghindari rokok dan minuman berkafein, menggantinya dengan air putih atau jus alami. Upaya edukatif di sekolah, seperti penyuluhan kesehatan tulang dan kampanye gaya hidup sehat, menjadi bagian penting dalam pencegahan dini. <br> osteoporosis bukanlah takdir yang hanya dialami usia lanjut, melainkan dapat dicegah melalui kebiasaan sehat sejak remaja. Pencegahan ini merupakan tanggung jawab bersama antara individu, keluarga, sekolah, tenaga kesehatan, dan pemerintah. Dengan sinergi edukasi, nutrisi, dan aktivitas fisik, generasi muda bebas osteoporosis bukanlah hal yang mustahil. <br> <br> Penulis: Alisha Sava Ardhana, Ilmu Keperawatan, Keilmuan.
+                            </p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-oktober-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-oktober-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcUrJ8snyAf8Xk-2Qq-OgVDgnib1XTRMYLeLj4pjZXaw16ug/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.632280065" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelOktoberKeilmuan = document.getElementById('love-icon-artikel-oktober-keilmuan');
+
+                    let hasLikedArtikelOktoberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-oktober-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelOktoberKeilmuan) {
+                        loveIconArtikelOktoberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelOktoberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelOktoberKeilmuan) {
+                            hasLikedArtikelOktoberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-oktober-keilmuan', JSON.stringify(true));
+                            loveIconArtikelOktoberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script> 
+                <div class="news-articles-with-comments">
                     <article class="news-item">
                         <img src="Dokumentasi_Sekolah Kastrat.jpg" alt="PBak">
                         <div class="news-info">
@@ -211,36 +259,6 @@
                         }
                     });       
                 </script>
-                <div class="news-articles-with-comments">
-                    <article class="news-item">
-                        <img src="Dokumentasi_Seminar Keislaman.jpg" alt="PBak">
-                        <div class="news-info">
-                            <h3>Seminar Keislaman DEMA FIKES 2025/2026: Membentuk Resolusi Diri Islami</h3>
-                            <p class="news-summary">
-                            Dalam rangka menyemarakkan datangnya Tahun Baru Islam 1447 H, DEMA FIKES UIN Syarif Hidayatullah Jakarta sukses menyelenggarakan Seminar Keislaman pada Jumat (4/7) bertempat di Masjid Ta’ajul Ilmi, Kampus UIN Jakarta. Kegiatan bertema “Resolusi Diri Berbasis Hikmah: Menetapkan Tujuan Hidup Berlandaskan Nilai-nilai Al-Qur’an dan As-Sunnah di Tahun Baru Hijriah” ini dihadiri oleh 27 panitia, 54 peserta aktif, serta 23 tamu undangan.
-                            <span class="ellipsis">...</span>
-                            </p>
-                            <p class="news-detail" style="display: none;">
-                            Rangkaian acara dimulai pukul 16.05 WIB dengan pembukaan oleh MC Farah Rizqi Nur Istiqomah, disusul tilawah ayat suci Al-Qur’an, lagu kebangsaan Indonesia Raya, dan sambutan dari berbagai tokoh, mulai dari Ketua Pelaksana, Ketua DEMA FIKES, Wakil Dekan III Bidang Kemahasiswaan, hingga Dekan FIKES. <br> Ustaz Silmy Aulia hadir sebagai pemateri utama dalam seminar ini. Dalam penyampaian yang penuh makna, beliau mengajak para mahasiswa untuk menjadikan momen pergantian tahun Hijriah sebagai sarana muhasabah, serta merumuskan kembali arah hidup yang berpijak pada nilai-nilai ilahiah. Menurutnya, resolusi hidup yang disusun dengan berlandaskan Al-Qur’an dan As-Sunnah akan membawa keberkahan dan arah hidup yang lebih terstruktur. <br> Sesi tanya jawab berlangsung hangat dan dinamis, menunjukkan antusiasme peserta terhadap topik yang dibahas. Usai materi, seluruh peserta dan tamu menunaikan salat Maghrib berjamaah sebelum acara ditutup. <br> Puncak acara diakhiri dengan pemberian penghargaan kepada peserta teraktif dan pemenang lomba, penyerahan sertifikat, serta pengisian formulir evaluasi. Doa bersama menjadi penutup kegiatan yang secara resmi usai pada pukul 18.55 WIB. <br> Melalui kegiatan ini, DEMA FIKES berharap mahasiswa dapat menapaki tahun baru Hijriah dengan semangat hijrah, membangun pribadi yang lebih baik, dan menjadikan ajaran Islam sebagai fondasi utama dalam setiap langkah kehidupan. <br><br> Penulis: Aqila Nur Kamila, Kesehatan Masyarakat, Kominfo
-                            </p>
-                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
-                        </div>
-                    </article>
-                    <div class="like-comment-section">
-                        <div class="like-section">
-                            <button id="like-button-seminar-keislaman" class="love-btn">
-                                <svg id="love-icon-artikel-seminar-keislaman" width="24" height="24" viewBox="0 0 24 24" fill="#888">
-                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="comment-section">
-                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfTQRPo3jrRUOMt9_3i7HUsLdqBAuSZE1RLI-1VKggJFg6O4g/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                                <input type="text" id="komentar" name="entry.226776730" placeholder="Masukkan komentar" required />
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -376,25 +394,9 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
                             loveIconPbakKemahas.setAttribute("fill", "#e53935"); // merah terang
                         }
                     });       
-                
-                    const loveIconSeminarKeislaman = document.getElementById('love-icon-artikel-seminar-keislaman');
-
-                    let hasLikedSeminarKeislaman = JSON.parse(localStorage.getItem('hasLiked-seminar-keislaman')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedSeminarKeislaman) {
-                        loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconSeminarKeislaman.addEventListener('click', () => {
-                    if (!hasLikedSeminarKeislaman) {
-                            hasLikedSeminarKeislaman = true;
-                            localStorage.setItem('hasLiked-seminar-keislaman', JSON.stringify(true));
-                            loveIconSeminarKeislaman.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-</script>
 </body>
 </html>
+
 
 
 
