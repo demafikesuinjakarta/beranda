@@ -73,6 +73,54 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_Oktober_Osteophorosis.jpg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Membangun Tulang Kuat Sejak Dini: Pencegahan Osteoporosis pada Remaja melalui Gaya Hidup Sehat</h3>
+                            <p class="news-summary">
+                            Osteoporosis, yang sering dianggap penyakit lansia, ternyata dapat mulai mengintai sejak remaja tanpa disadari dan berujung pada patah tulang di kemudian hari. Masa remaja merupakan fase krusial untuk membentuk kepadatan tulang maksimal yang menjadi “tabungan” bagi masa tua. Sekitar 90% massa tulang terbentuk hingga usia 18 tahun, sehingga pola hidup sehat pada periode ini sangat menentukan kekuatan tulang di masa depan.
+                                <span class="ellipsis">...</span>
+                            </p>
+                            <p class="news-detail" style="display: none;">
+                            Beberapa faktor gaya hidup dapat memengaruhi kesehatan tulang remaja, antara lain kurangnya asupan kalsium dan vitamin D, minimnya aktivitas fisik, kebiasaan merokok atau konsumsi minuman bersoda, serta kurangnya edukasi tentang kesehatan tulang. Gaya hidup modern yang cenderung sedentari juga memperburuk kondisi ini. Untuk mencegah osteoporosis, remaja dianjurkan menjalani pola makan seimbang yang kaya kalsium—seperti susu, tahu, tempe, ikan sarden, dan sayuran hijau—serta memenuhi kebutuhan harian sekitar 1.300 mg kalsium. Selain itu, paparan sinar matahari pagi selama 10–15 menit per hari dapat membantu tubuh memproduksi vitamin D secara alami. <br> Olahraga teratur seperti lari, lompat tali, atau latihan beban juga penting untuk merangsang pertumbuhan tulang, dengan rekomendasi minimal 60 menit aktivitas fisik sedang hingga berat per hari. Remaja juga perlu menghindari rokok dan minuman berkafein, menggantinya dengan air putih atau jus alami. Upaya edukatif di sekolah, seperti penyuluhan kesehatan tulang dan kampanye gaya hidup sehat, menjadi bagian penting dalam pencegahan dini. <br> osteoporosis bukanlah takdir yang hanya dialami usia lanjut, melainkan dapat dicegah melalui kebiasaan sehat sejak remaja. Pencegahan ini merupakan tanggung jawab bersama antara individu, keluarga, sekolah, tenaga kesehatan, dan pemerintah. Dengan sinergi edukasi, nutrisi, dan aktivitas fisik, generasi muda bebas osteoporosis bukanlah hal yang mustahil. <br> <br> Penulis: Alisha Sava Ardhana, Ilmu Keperawatan, Keilmuan.
+                            </p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-oktober-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-oktober-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcUrJ8snyAf8Xk-2Qq-OgVDgnib1XTRMYLeLj4pjZXaw16ug/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.632280065" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelOktoberKeilmuan = document.getElementById('love-icon-artikel-oktober-keilmuan');
+
+                    let hasLikedArtikelOktoberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-oktober-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelOktoberKeilmuan) {
+                        loveIconArtikelOktoberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelOktoberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelOktoberKeilmuan) {
+                            hasLikedArtikelOktoberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-oktober-keilmuan', JSON.stringify(true));
+                            loveIconArtikelOktoberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_September_Cacingan.webp" alt="PBak">
                         <div class="news-info">
                             <h3>Kasus Cacingan Meningkat, BPOM Peringatkan Bahaya Minum Obat Tanpa Resep</h3>
@@ -355,6 +403,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
 
 
 
