@@ -72,6 +72,53 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_November_Demam Berdarah.jpg" alt="PBak">
+                        <div class="news-info">
+                            <h3>“DBD Melejit Secara Nasional, Tangsel Masuk Radar—Saatnya Gerak Cepat!"</h3>
+                            <p class="news-summary">
+                            Demam Berdarah Dengue (DBD) tetap menjadi ancaman kesehatan di Indonesia, terutama di wilayah tropis seperti Tangerang Selatan yang mengalami peningkatan kasus akibat mobilitas penduduk, perubahan iklim, serta lingkungan yang mendukung perkembangbiakan nyamuk Aedes. Lonjakan kasus nasional dan tingginya angka kejadian di Tangsel menunjukkan perlunya kewaspadaan dan tindakan pencegahan yang lebih optimal. Faktor suhu, kelembapan, dan curah hujan berperan besar dalam meningkatkan risiko penularan. Gejala DBD dapat berupa demam tinggi, nyeri tubuh, mual, hingga perdarahan ringan. Untuk menekan penyebaran, masyarakat dihimbau menerapkan program 3M Plus dan menjaga kebersihan lingkungan serta diri sebagai langkah utama pencegahan.
+                                </p>
+                            <p class="news-detail" style="display: none;">
+                            Demam Berdarah Dengue (DBD) merupakan penyakit yang disebabkan oleh virus dengue yang ditularkan melalui gigitan nyamuk Aedes aegypti dan Aedes albopictus. Penyakit ini banyak terjadi di daerah tropis seperti Indonesia dan dipengaruhi oleh kondisi iklim, lingkungan, serta perilaku masyarakat yang mendukung perkembangbiakan nyamuk. Kota Tangerang Selatan termasuk wilayah yang mengalami peningkatan kasus, didorong oleh mobilitas masyarakat yang tinggi, pertumbuhan permukiman, serta cuaca pancaroba. Hingga Oktober 2025, tercatat lebih dari 131 ribu kasus DBD di Indonesia dengan 544 kematian, sementara di Tangsel sendiri terdapat sekitar 500 kasus sepanjang Januari–September 2025. Pemerintah daerah melakukan langkah antisipatif seperti program Jumantik dan silent surveillance, namun masih ditemukan bahwa sebagian masyarakat terlalu mengandalkan fogging, padahal metode tersebut hanya efektif untuk membunuh nyamuk dewasa, bukan jentik. <br> Peningkatan kasus DBD erat kaitannya dengan faktor lingkungan seperti suhu, kelembapan, dan curah hujan. Kelembapan tinggi dan curah hujan yang meningkat mempercepat perkembangan jentik serta memperpanjang umur nyamuk, sementara perubahan suhu yang tidak stabil membuat dinamika penularan bervariasi. Kasus biasanya meningkat pada masa peralihan musim ketika genangan air banyak tersisa dan menjadi tempat ideal bagi nyamuk bertelur. Secara klinis, DBD ditandai dengan demam tinggi mendadak selama 2–7 hari, nyeri otot dan sendi, sakit kepala, ruam kulit, mual, muntah, serta gejala perdarahan ringan seperti mimisan atau gusi berdarah. <br> Untuk menekan angka kejadian, Kementerian Kesehatan mendorong penerapan program 3M Plus, yaitu menguras tempat penampungan air, menutup rapat wadah air, dan memanfaatkan kembali barang bekas yang dapat menampung air. Langkah Plus meliputi upaya tambahan seperti memelihara ikan pemakan jentik, memasang kawat kasa, menjaga kebersihan lingkungan, hingga penggunaan larvasida pada tempat air yang sulit dibersihkan. Pencegahan pribadi juga penting, termasuk memakai kelambu, menggunakan lotion antinyamuk, memakai pakaian panjang, serta menjaga daya tahan tubuh dengan pola hidup bersih dan sehat. Upaya terpadu antara masyarakat dan pemerintah menjadi kunci untuk mengendalikan penyebaran DBD. <br> <br> Penulis: Anisa Rasheeda Prabaningrum, Farmasi, Keilmuan.
+                            </p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-november-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-november-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdAy8Z6Q2r6eAFBccmnJ9kwJMG6nJrWz4mYx9V_ujhbsrfugg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.1625732808" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelNovemberKeilmuan = document.getElementById('love-icon-artikel-november-keilmuan');
+
+                    let hasLikedArtikelNovemberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-november-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelNovemberKeilmuan) {
+                        loveIconArtikelNovemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelNovemberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelNovemberKeilmuan) {
+                            hasLikedArtikelNovemberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-november-keilmuan', JSON.stringify(true));
+                            loveIconArtikelNovemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_Oktober_Osteophorosis.jpg" alt="PBak">
                         <div class="news-info">
                             <h3>Membangun Tulang Kuat Sejak Dini: Pencegahan Osteoporosis pada Remaja melalui Gaya Hidup Sehat</h3>
@@ -211,55 +258,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="news-articles-with-comments">
-                    <article class="news-item">
-                        <img src="Dokumentasi_September_Cacingan.webp" alt="PBak">
-                        <div class="news-info">
-                            <h3>Kasus Cacingan Meningkat, BPOM Peringatkan Bahaya Minum Obat Tanpa Resep</h3>
-                            <p class="news-summary">
-                            Halo Sobat Fikes! Belakangan ini, masyarakat Indonesia dihebohkan oleh kasus tragis seorang balita di Sukabumi, Jawa Barat, yang meninggal dunia dengan tubuhnya yang dipenuhi cacing. Meski Kementerian Kesehatan menyampaikan bahwa kemungkinan penyebab kematian bisa juga karena meningitis tuberkulosis atau infeksi berat lainnya, kasus ini tetap menjadi perhatian serius. Selain itu, pada bulan April lalu, ditemukan cacing hidup sepanjang 35 cm di usus seorang anak berusia 3 tahun asal Madura. Cacing Ascaris lumbricoides, atau yang dikenal sebagai cacing gelang, ditemukan setelah dokter di RSUD dr. Soebandi Jember melakukan operasi penghentian. Kejadian-kejadian ini mengingatkan kita bahwa infeksi cacing masih menjadi ancaman nyata, bahkan di daerah yang tergolong maju dan tidak terpencil.
-                            <span class="ellipsis">...</span>
-                            </p>
-                            <p class="news-detail" style="display: none;">
-                            Cacingan masih menjadi masalah kesehatan serius di Indonesia, terutama pada anak-anak, dengan prevalensi rata-rata 28% di 181 kabupaten/kota. Meski demikian, BPOM mengingatkan masyarakat agar tidak sembarangan mengonsumsi obat cacing tanpa resep dokter, karena setiap jenis cacing membutuhkan obat dan dosis yang berbeda. Penggunaan obat seperti Albendazole atau Mebendazole dengan dosis tidak tepat dapat menimbulkan efek samping, termasuk mual, muntah, diare, gangguan hati, hingga resistensi obat. Oleh karena itu, penanganan terbaik adalah berkonsultasi ke dokter untuk diagnosis dan pemberian terapi yang sesuai. <br> Selain pengobatan, langkah pencegahan juga penting untuk menekan angka kejadian cacingan. Masyarakat dianjurkan untuk menjaga kebersihan diri dengan mencuci tangan menggunakan sabun, memastikan sanitasi lingkungan tetap terjaga, memasak makanan hingga matang sempurna, serta selalu menggunakan alas kaki untuk mencegah infeksi cacing tambang. Dengan meningkatnya kesadaran, diharapkan masyarakat dapat mencegah cacingan sekaligus menghindari dampak buruk dari penggunaan obat yang tidak bijak. Selain pengobatan, langkah pencegahan juga penting untuk menekan angka kejadian cacingan. Masyarakat dianjurkan untuk menjaga kebersihan diri dengan mencuci tangan menggunakan sabun, memastikan sanitasi lingkungan tetap terjaga, memasak makanan hingga matang sempurna, serta selalu menggunakan alas kaki untuk mencegah infeksi cacing tambang. Dengan meningkatnya kesadaran, diharapkan masyarakat dapat mencegah cacingan sekaligus menghindari dampak buruk dari penggunaan obat yang tidak bijak. <br> <br> Penulis: Nabilah Annaila, Kesehatan Masyarakat, Keilmuan
-                            </p>
-                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
-                        </div>
-                    </article>
-                    <div class="like-comment-section">
-                        <div class="like-section">
-                            <button id="like-button-artikel-september-keilmuan" class="love-btn">
-                                <svg id="love-icon-artikel-september-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
-                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="comment-section">
-                            <form action="https://docs.google.com/forms/d/e/1FAIpQLScOUgfyDk7Sb2PTrO958L9h_U25yw7Q9S1lpeVJZDlKnj8Ynw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                                    <input type="text" id="komentar" name="entry.1307543051" placeholder="Masukkan komentar" required />
-                                    <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    const loveIconArtkelSeptemberKeilmuan = document.getElementById('love-icon-artikel-september-keilmuan');
-
-                    let hasLikedArtikelSeptemberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-september-keilmuan')) || false;
-
-                    // Set icon warna dan teks jika sudah like sebelumnya
-                    if (hasLikedArtikelSeptemberKeilmuan) {
-                        loveIconArtikelSeptemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
-                    }
-                        loveIconArtkelSeptemberKeilmuan.addEventListener('click', () => {
-                    if (!hasLikedArtikelSeptemberKeilmuan) {
-                            hasLikedArtikelSeptemberKeilmuan = true;
-                            localStorage.setItem('hasLiked-artikel-september-keilmuan', JSON.stringify(true));
-                            loveIconArtkelSeptemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
-                        }
-                    });       
-                </script>
-                </div>
             </div>
         </section>
     </main>
@@ -396,6 +394,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
                     });       
 </body>
 </html>
+
 
 
 
