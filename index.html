@@ -72,6 +72,52 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_Desember_Resistensi Bakteri.jpeg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Melawan Resistensi Bakteri: Tantangan Besar Kesehatan Publik Indonesia</h3>
+                            <p class="news-summary">
+                            Resistensi bakteri terhadap antibiotik telah menjadi ancaman nyata bagi kesehatan publik di Indonesia. Fenomena ini terjadi ketika bakteri tidak lagi responsif terhadap antibiotik akibat perubahan genetik yang dipicu oleh penggunaan obat yang tidak tepat. Dampaknya, infeksi yang sebelumnya mudah diatasi kini menjadi lebih sulit disembuhkan, membutuhkan terapi yang lebih kompleks, mahal, dan berisiko. Kondisi ini diperburuk oleh rendahnya pemahaman masyarakat tentang penggunaan antibiotik yang rasional serta lemahnya pengawasan distribusi obat.
+                                </p>
+                            <p class="news-detail" style="display: none;">
+                            Berdasarkan data surveilans nasional, berbagai bakteri penyebab infeksi utama menunjukkan peningkatan resistensi yang signifikan. Escherichia coli dan Klebsiella pneumoniae semakin kebal terhadap antibiotik lini pertama, sementara Staphylococcus aureus resisten metisilin (MRSA) masih menjadi tantangan di fasilitas pelayanan kesehatan. Bahkan, beberapa bakteri telah menunjukkan resistensi terhadap antibiotik lini terakhir, menandakan ancaman serius menuju era pasca-antibiotik apabila tidak segera ditangani. <br> Penggunaan antibiotik yang tidak rasional menjadi faktor utama percepatan resistensi bakteri. Praktik pembelian antibiotik tanpa resep, penggunaan untuk penyakit akibat virus, serta ketidakpatuhan terhadap dosis dan durasi pengobatan masih sering terjadi. Selain itu, penggunaan antibiotik di sektor peternakan dan lemahnya pengendalian infeksi di fasilitas kesehatan turut berkontribusi terhadap penyebaran bakteri resisten di masyarakat dan lingkungan. <br> Dampak resistensi antibiotik sangat luas, tidak hanya meningkatkan angka kesakitan dan kematian, tetapi juga membebani sistem kesehatan secara ekonomi. Infeksi resisten membutuhkan perawatan lebih lama dan terapi yang lebih mahal, serta mengancam keberhasilan berbagai prosedur medis modern seperti operasi besar, perawatan bayi prematur, dan kemoterapi. Tanpa antibiotik yang efektif, risiko komplikasi medis meningkat secara signifikan. <br> Sebagai respons, pemerintah Indonesia telah mengembangkan berbagai strategi pengendalian, termasuk Program Pengendalian Resistensi Antimikroba (PPRA), penguatan surveilans nasional, serta pendekatan One Health yang melibatkan sektor kesehatan manusia, hewan, dan lingkungan. Namun, upaya ini memerlukan dukungan penuh dari masyarakat. Penggunaan antibiotik secara bijak dan bertanggung jawab menjadi kunci utama dalam menahan laju resistensi bakteri demi menjaga efektivitas antibiotik bagi generasi mendatang. <br> <br> Penulis: Nazar Akmalullail, Farmasi, Keilmuan</p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-desember-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-desember-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSerWE6YAIxpD-M7v5fbeHEqkZ-Zf_iQY9ADHGJ_7RT_fcCyAw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.2100332126" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelDesemberKeilmuan = document.getElementById('love-icon-artikel-desember-keilmuan');
+
+                    let hasLikedArtikelDesemberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-desember-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelDesemberKeilmuan) {
+                        loveIconArtikelDesemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelDesemberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelDesemberKeilmuan) {
+                            hasLikedArtikelDesemberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-desember-keilmuan', JSON.stringify(true));
+                            loveIconArtikelDesemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_November_Demam Berdarah.jpg" alt="PBak">
                         <div class="news-info">
                             <h3>“DBD Melejit Secara Nasional, Tangsel Masuk Radar—Saatnya Gerak Cepat!"</h3>
@@ -227,37 +273,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="news-articles-with-comments">
-                    <article class="news-item">
-                        <img src="Dokumentasi_PBAK.jpg" alt="PBak">
-                        <div class="news-info">
-                            <h3>PBAK FIKES UIN Jakarta 2025: Tanamkan Nilai Religius dan Integritas Sejak Awal Perkuliahan</h3>
-                            <p class="news-summary">
-                            Departemen Kemahasiswaan Fakultas Ilmu Kesehatan (FIKES) UIN Syarif Hidayatullah Jakarta sukses menyelenggarakan Pengenalan Budaya Akademik dan Kemahasiswaan (PBAK) 2025 pada 28–29 Agustus 2025 bertempat di Gedung Sarana Olahraga FIKES. Kegiatan ini diikuti oleh 456 mahasiswa baru dari Program Studi Farmasi, Ilmu Keperawatan, dan Kesehatan Masyarakat dengan antusiasme tinggi dan semangat kebersamaan.
-                            <span class="ellipsis">...</span>
-                            </p>
-                            <p class="news-detail" style="display: none;">
-                            Mengusung tema “Empower the Soul, Elevate the Future”, PBAK menjadi momentum penting bagi mahasiswa baru untuk mengenal dunia akademik sekaligus menanamkan nilai religius, integritas, dan akhlakul karimah. Tema ini mencerminkan visi FIKES untuk membentuk calon tenaga kesehatan yang unggul secara akademik dan berakhlak mulia. Maskot resmi tahun ini, “Sel Darah Merah”, dipilih sebagai simbol semangat kerja keras, energi positif, dan dedikasi mahasiswa dalam menjalani kehidupan kampus. <br> Rangkaian acara PBAK dibuka dengan sambutan dari para pimpinan fakultas yang memberikan arahan mengenai pentingnya adaptasi, kedisiplinan, dan tanggung jawab sebagai mahasiswa baru. Dalam sesi pembekalan akademik, peserta mendapatkan penjelasan mengenai sistem perkuliahan, etika akademik, serta peran mahasiswa dalam mengimplementasikan Tri Dharma Perguruan Tinggi — pendidikan, penelitian, dan pengabdian masyarakat. <br> Selain orientasi akademik, mahasiswa baru juga diperkenalkan dengan berbagai organisasi kemahasiswaan di lingkungan FIKES, termasuk Dewan Eksekutif Mahasiswa (DEMA) dan Himpunan Mahasiswa Program Studi (HMPS). Melalui sesi ini, mahasiswa diajak memahami pentingnya keterlibatan dalam kegiatan organisasi untuk mengasah soft skill, kepemimpinan, dan rasa tanggung jawab sosial. Pada hari kedua, kegiatan diisi dengan sesi internalisasi nilai dan penugasan progres diary serta esai reflektif. Mahasiswa diajak menuliskan pandangan dan harapan mereka sebagai bagian dari komunitas akademik FIKES. Suasana kegiatan berjalan hangat, diwarnai dengan semangat kekeluargaan antara panitia, dosen, dan peserta. <br> Puncak acara ditandai dengan pengumuman Ketua Angkatan Bhaktisatya Adhitama 2025 serta pemberian apresiasi bagi mahasiswa baru berprestasi. Dalam sambutannya, Dekan FIKES, Prof. Dr. apt. Zilhadia, M.Si., menegaskan pentingnya disiplin, integritas, dan semangat belajar sebagai bekal menjadi tenaga kesehatan profesional yang berakhlak mulia. Melalui PBAK FIKES 2025, Fakultas Ilmu Kesehatan berkomitmen untuk menumbuhkan generasi mahasiswa yang berkarakter, berwawasan luas, dan siap berkontribusi positif bagi bangsa dan masyarakat. Kegiatan ini menjadi langkah awal transformasi mahasiswa baru menuju insan akademik yang unggul dalam ilmu, tangguh dalam moral, dan rendah hati dalam pengabdian. <br> <br> Penulis : Anatasya Delviani Saputri, Ilmu Keperawaratan, Kemahasiswaan.
-                            </p>
-                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
-                        </div>
-                    </article>
-                    <div class="like-comment-section">
-                        <div class="like-section">
-                            <button id="like-button-pbak-kemahas" class="love-btn">
-                                <svg id="love-icon-pbak-kemahas" width="24" height="24" viewBox="0 0 24 24" fill="#888">
-                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="comment-section">
-                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdHxfaYPFCQ2MFKRcC2LwnxVGymk5XDTIl1RB_aPSGM72mFGw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
-                                <input type="text" id="komentar" name="entry.1505365527" placeholder="Masukkan komentar" required />
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -394,6 +409,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
                     });       
 </body>
 </html>
+
 
 
 
