@@ -73,6 +73,52 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_Desember_Resistensi Bakteri.jpeg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Melawan Resistensi Bakteri: Tantangan Besar Kesehatan Publik Indonesia</h3>
+                            <p class="news-summary">
+                            Resistensi bakteri terhadap antibiotik telah menjadi ancaman nyata bagi kesehatan publik di Indonesia. Fenomena ini terjadi ketika bakteri tidak lagi responsif terhadap antibiotik akibat perubahan genetik yang dipicu oleh penggunaan obat yang tidak tepat. Dampaknya, infeksi yang sebelumnya mudah diatasi kini menjadi lebih sulit disembuhkan, membutuhkan terapi yang lebih kompleks, mahal, dan berisiko. Kondisi ini diperburuk oleh rendahnya pemahaman masyarakat tentang penggunaan antibiotik yang rasional serta lemahnya pengawasan distribusi obat.
+                                </p>
+                            <p class="news-detail" style="display: none;">
+                            Berdasarkan data surveilans nasional, berbagai bakteri penyebab infeksi utama menunjukkan peningkatan resistensi yang signifikan. Escherichia coli dan Klebsiella pneumoniae semakin kebal terhadap antibiotik lini pertama, sementara Staphylococcus aureus resisten metisilin (MRSA) masih menjadi tantangan di fasilitas pelayanan kesehatan. Bahkan, beberapa bakteri telah menunjukkan resistensi terhadap antibiotik lini terakhir, menandakan ancaman serius menuju era pasca-antibiotik apabila tidak segera ditangani. <br> Penggunaan antibiotik yang tidak rasional menjadi faktor utama percepatan resistensi bakteri. Praktik pembelian antibiotik tanpa resep, penggunaan untuk penyakit akibat virus, serta ketidakpatuhan terhadap dosis dan durasi pengobatan masih sering terjadi. Selain itu, penggunaan antibiotik di sektor peternakan dan lemahnya pengendalian infeksi di fasilitas kesehatan turut berkontribusi terhadap penyebaran bakteri resisten di masyarakat dan lingkungan. <br> Dampak resistensi antibiotik sangat luas, tidak hanya meningkatkan angka kesakitan dan kematian, tetapi juga membebani sistem kesehatan secara ekonomi. Infeksi resisten membutuhkan perawatan lebih lama dan terapi yang lebih mahal, serta mengancam keberhasilan berbagai prosedur medis modern seperti operasi besar, perawatan bayi prematur, dan kemoterapi. Tanpa antibiotik yang efektif, risiko komplikasi medis meningkat secara signifikan. <br> Sebagai respons, pemerintah Indonesia telah mengembangkan berbagai strategi pengendalian, termasuk Program Pengendalian Resistensi Antimikroba (PPRA), penguatan surveilans nasional, serta pendekatan One Health yang melibatkan sektor kesehatan manusia, hewan, dan lingkungan. Namun, upaya ini memerlukan dukungan penuh dari masyarakat. Penggunaan antibiotik secara bijak dan bertanggung jawab menjadi kunci utama dalam menahan laju resistensi bakteri demi menjaga efektivitas antibiotik bagi generasi mendatang. <br> <br> Penulis: Nazar Akmalullail, Farmasi, Keilmuan</p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-desember-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-desember-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSerWE6YAIxpD-M7v5fbeHEqkZ-Zf_iQY9ADHGJ_7RT_fcCyAw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.2100332126" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelDesemberKeilmuan = document.getElementById('love-icon-artikel-desember-keilmuan');
+
+                    let hasLikedArtikelDesemberKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-desember-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelDesemberKeilmuan) {
+                        loveIconArtikelDesemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelDesemberKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelDesemberKeilmuan) {
+                            hasLikedArtikelDesemberKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-desember-keilmuan', JSON.stringify(true));
+                            loveIconArtikelDesemberKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_November_Demam Berdarah.jpg" alt="PBak">
                         <div class="news-info">
                             <h3>“DBD Melejit Secara Nasional, Tangsel Masuk Radar—Saatnya Gerak Cepat!"</h3>
@@ -450,6 +496,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
 
 
 
