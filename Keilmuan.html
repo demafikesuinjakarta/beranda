@@ -73,6 +73,52 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_Januari_Skabies.jpg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Mengenal Skabies, Penyakit Kulit Menular yang Perlu Diwaspadai</h3>
+                            <p class="news-summary">
+                            Skabies atau yang sering dikenal sebagai kudis merupakan penyakit kulit menular yang disebabkan oleh infestasi tungau Sarcoptes scabiei. Penyakit ini masih banyak ditemukan di masyarakat, terutama pada lingkungan dengan kepadatan hunian tinggi dan kebersihan yang kurang terjaga, seperti asrama atau pesantren. Data menunjukkan bahwa prevalensi skabies di Indonesia masih cukup tinggi, dipengaruhi oleh keterbatasan akses air bersih, perilaku kebersihan diri yang kurang baik, serta seringnya kontak fisik antarindividu.    <span class="ellipsis">...</span>
+                                </p>
+                            <p class="news-detail" style="display: none;">
+                            Penularan skabies terjadi melalui kontak langsung kulit ke kulit dengan penderita. Tungau betina akan menggali terowongan di lapisan kulit untuk bertelur, yang kemudian memicu reaksi alergi tubuh. Gejala utama skabies adalah rasa gatal hebat yang biasanya muncul beberapa minggu setelah infestasi pertama dan cenderung memberat pada malam hari. Selain gatal, dapat muncul kelainan kulit akibat garukan yang berulang. <br> Karena sifatnya yang mudah menular, skabies memerlukan penanganan yang tepat dan serentak. Seluruh anggota keluarga atau penghuni serumah dianjurkan menjalani pengobatan bersamaan untuk mencegah penularan ulang. Pengobatan biasanya dilakukan dengan obat oles yang digunakan pada malam hari. Selain itu, kebersihan lingkungan harus dijaga dengan mencuci pakaian, sprei, handuk, dan perabot kain menggunakan air panas serta menyetrikanya untuk membunuh tungau. <br> Pencegahan skabies tidak hanya bergantung pada pengobatan, tetapi juga pada penerapan perilaku hidup bersih dan sehat. Menjaga kebersihan diri, lingkungan tempat tinggal, serta menghindari kontak erat dengan penderita merupakan langkah penting untuk menekan penyebaran penyakit ini. Dengan kesadaran dan penanganan yang tepat, skabies dapat dicegah dan dikendalikan secara efektif. <br> <br> Penulis: Arya Maulana Rizky, Farmasi, Keilmuan. </p>
+                            <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-januari-keilmuan" class="love-btn">
+                                <svg id="love-icon-artikel-januari-keilmuan" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdwRrJkXLarOlHhoqR_vYhnqyzzIU170NsXjSSPNFmdGMlaIw/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.11077862" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelJanuariKeilmuan = document.getElementById('love-icon-artikel-januari-keilmuan');
+
+                    let hasLikedArtikelJanuariKeilmuan = JSON.parse(localStorage.getItem('hasLiked-artikel-januari-keilmuan')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelJanuariKeilmuan) {
+                        loveIconArtikelJanuariKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelJanuariKeilmuan.addEventListener('click', () => {
+                    if (!hasLikedArtikelJanuariKeilmuan) {
+                            hasLikedArtikelJanuariKeilmuan = true;
+                            localStorage.setItem('hasLiked-artikel-januari-keilmuan', JSON.stringify(true));
+                            loveIconArtikelJanuariKeilmuan.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_Desember_Resistensi Bakteri.jpeg" alt="PBak">
                         <div class="news-info">
                             <h3>Melawan Resistensi Bakteri: Tantangan Besar Kesehatan Publik Indonesia</h3>
@@ -496,6 +542,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
 
 
 
