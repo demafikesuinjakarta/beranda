@@ -73,6 +73,51 @@
             <div class="news-list">
                 <div class="news-articles-with-comments">
                     <article class="news-item">
+                        <img src="Dokumentasi_Januari_Leptospirosis.jpg" alt="PBak">
+                        <div class="news-info">
+                            <h3>Jangan Anggap Remeh! Kenali dan Cegah Leptospirosis Sejak Dini</h3>
+                            <p class="news-summary">
+                            Leptospirosis merupakan penyakit zoonosis yang disebabkan oleh bakteri Leptospira dan ditularkan melalui urin hewan terinfeksi, terutama tikus. Penyakit ini sering muncul saat musim hujan dan menjadi ancaman serius bagi kesehatan masyarakat. Indonesia bahkan menempati peringkat tinggi secara global dalam angka kematian akibat leptospirosis, sehingga kewaspadaan terhadap penyakit ini sangat diperlukan, terutama di daerah perkotaan dan wilayah dengan sanitasi lingkungan yang kurang baik.    </p>
+                                <p class="news-detail" style="display: none;">
+                            Faktor risiko utama leptospirosis adalah keberadaan tikus di sekitar pemukiman. Tikus dapat berpindah dengan cepat dan membawa bakteri ke berbagai lingkungan, terutama rumah yang berada dekat saluran pembuangan atau tempat sampah. Selain itu, genangan air yang sering terjadi saat musim hujan menjadi media ideal bagi bakteri Leptospira untuk bertahan hidup. Risiko penularan semakin meningkat apabila seseorang memiliki luka terbuka pada kulit atau tidak menggunakan alat pelindung diri, seperti sepatu bot, saat beraktivitas di lingkungan yang basah dan berlumpur. <br> Sanitasi lingkungan yang buruk, seperti selokan yang tersumbat dan sampah yang menumpuk, turut memperbesar risiko penyebaran penyakit ini karena menarik kehadiran tikus. Oleh karena itu, pencegahan leptospirosis perlu dilakukan secara menyeluruh dengan menjaga kebersihan lingkungan dan mengurangi faktor risiko penularan. Langkah sederhana seperti membersihkan selokan secara rutin, menutup celah rumah agar tikus tidak masuk, menggunakan alas kaki saat beraktivitas di luar rumah, serta menjaga lingkungan tetap bersih dan kering dapat memberikan perlindungan yang signifikan. <br> Dengan meningkatkan kesadaran dan kepedulian terhadap kesehatan lingkungan, masyarakat dapat berperan aktif dalam mencegah leptospirosis. Upaya pencegahan yang konsisten tidak hanya melindungi diri sendiri, tetapi juga menjaga kesehatan keluarga dan lingkungan sekitar. <br> <br> Penulis: Nabilah Annaila, Kesehatan Masyarakat, Keilmuan. </p>
+                             <a href="#" class="btn-secondary selengkapnya-btn">Selengkapnya</a>
+                        </div>
+                    </article>
+                    <div class="like-comment-section">
+                        <div class="like-section">
+                            <button id="like-button-artikel-januari-keilmuan-2" class="love-btn">
+                                <svg id="love-icon-artikel-januari-keilmuan-2" width="24" height="24" viewBox="0 0 24 24" fill="#888">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="comment-section">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdUiUKw7HrGh7twB_ljeNBAtHmYZt-k19ZK6hPcoUt4KwbSJg/formResponse" method="POST" target="_blank" onsubmit="alert('Terima kasih sudah mengisi!');">
+                                <input type="text" id="komentar" name="entry.2050839011" placeholder="Masukkan komentar" required/>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const loveIconArtikelJanuariKeilmuan2 = document.getElementById('love-icon-artikel-januari-keilmuan-2');
+
+                    let hasLikedArtikelJanuariKeilmuan2 = JSON.parse(localStorage.getItem('hasLiked-artikel-januari-keilmuan-2')) || false;
+
+                    // Set icon warna dan teks jika sudah like sebelumnya
+                    if (hasLikedArtikelJanuariKeilmuan2) {
+                        loveIconArtikelJanuariKeilmuan2.setAttribute("fill", "#e53935"); // merah terang
+                    }
+                        loveIconArtikelJanuariKeilmuan2.addEventListener('click', () => {
+                    if (!hasLikedArtikelJanuariKeilmuan2) {
+                            hasLikedArtikelJanuariKeilmuan2 = true;
+                            localStorage.setItem('hasLiked-artikel-januari-keilmuan-2', JSON.stringify(true));
+                            loveIconArtikelJanuariKeilmuan2.setAttribute("fill", "#e53935"); // merah terang
+                        }
+                    });       
+                </script>
+                <div class="news-articles-with-comments">
+                    <article class="news-item">
                         <img src="Dokumentasi_Januari_Skabies.jpg" alt="PBak">
                         <div class="news-info">
                             <h3>Mengenal Skabies, Penyakit Kulit Menular yang Perlu Diwaspadai</h3>
@@ -542,6 +587,7 @@ document.querySelectorAll('.selengkapnya-btn').forEach(function(btn) {
 </body>
 
 </html>
+
 
 
 
